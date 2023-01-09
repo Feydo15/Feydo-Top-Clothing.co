@@ -31,12 +31,42 @@ const cartScreen = () => {
                <img src="" alt="" />
            </div>
            <div className='cart-text col-md-5 d-flex align-items-center'>
-               <Link to="#"></Link>
+               <Link to="#">
+                <h4>dfjpdjjpd</h4>
+               </Link>
            </div>
+           <div className="cart-qty col-md-2 col-sm-5 mt-md-5 mt-md-0 d-flex flex-direction-row">
+            <h6>QUANTITY</h6>
+            <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                </select>
+           </div>
+           <div className="cart-price mt-3 mt-md-0 col-md-2 align-items-sm-end ">
+             <h6>SUBTOTAL</h6>
+             <h4>$898</h4>
+           </div>
+       </div>
+       {/* End of cart iterms */}
+       <div className="total">
+        <span className="sub">total:</span>
+        <span className="total-price">$567</span>
+       </div>
+       <hr />
+       <div className="cart-buttons d-flex align-items-center row">
+        <Link to="/" className="col-md-6 ">
+            <button>Continue To Shoppin</button>
+        </Link>
+        <div className="col-md-6 d-flex justify-content-md-end mt-3 mt-md-0">
+            <button>
+                <Link to="/shippin" className="text-white">Checkout</Link>
+            </button>
+        </div>
        </div>
    </div>
    </>
-  )
-}
+  );
+};
 
 export default cartScreen
