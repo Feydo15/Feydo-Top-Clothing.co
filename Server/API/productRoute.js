@@ -12,7 +12,6 @@ ProductRoute.get("/", asyncHandler( async (req, res) => {
 }));
 
 // Get single product
-
 ProductRoute.get("/:id", asyncHandler( async (req, res) => {
     const product = await Product.findById(req.params.id)
     if (product) {

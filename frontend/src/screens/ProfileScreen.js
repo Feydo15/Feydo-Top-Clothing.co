@@ -15,7 +15,7 @@ const ProfileScreen = () => {
            <div className="author-card-cover"></div>
      <div className="author-card-profile">
         <div className="author-card-avatar col-md-5">
-            <img src="../../public/Home-img/1644216635611.jpg" alt="user profile image" />
+            <img src="../../public/Home-img/1644216635611.jpg" alt="user profile" />
         </div>
         <div className="author-card-details col-md-7">
             <h5 className="author-card-name mb-2">
@@ -42,7 +42,7 @@ const ProfileScreen = () => {
                     type="button"
                     role="tab"
                     aria-controls="v-pills-home"
-                    aria-srlected="true"
+                    aria-selected="true"
                     >
                         Profile Settings
                     </button>
@@ -54,7 +54,7 @@ const ProfileScreen = () => {
                      type="button"
                      role="tab"
                      aria-controls="v-pills-profile"
-                     aria-srlected="false"
+                     aria-selected="false"
                     >
                         Order List
                         <span className="badge2">3</span>

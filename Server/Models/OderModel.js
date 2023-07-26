@@ -27,7 +27,7 @@ const orderSchema = new Schema({
      },
      PaymentMethod: {
         type: String,
-        required: true;
+        required: true,
         default: "Paypal",
      },
      PaymentResult:{
@@ -39,17 +39,17 @@ const orderSchema = new Schema({
      taxPrice: {
         type: Number,
         required: true,
-        default: 0,0
+        default: 0.0
      },
      shippingPrice:{
         type: Number,
         required: true,
-        default: 0,0
+        default: 0.0
      },
      totalPrice:{
         type: Number,
         required: true,
-        default: 0,0
+        default: 0.0
      },
      isPaid:{
         type: Boolean,
@@ -67,10 +67,10 @@ const orderSchema = new Schema({
      deliveredAt:{
         type:Date
      }
-}
+},
 {
     timeStamps: true
-})
+});
 
 
 const Order = mongoose.model('Order', orderSchema);

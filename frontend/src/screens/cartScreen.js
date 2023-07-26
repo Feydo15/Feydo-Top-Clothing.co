@@ -1,9 +1,39 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../Components/Header';
-import { Link } from "react-router-dom";
+import { Link,  useLocation  } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../Redux/Actions/cartActions';
 
-const cartScreen = () => {
+const CartScreen = () => {
     window.scrollTo(0, 0);
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const encodedData = searchParams.get('data');
+  const dispatch = useDispatch();
+     
+  if (encodedData) {
+    try {
+      const data = JSON.parse(decodeURIComponent(encodedData));
+      console.log("Data:", data);
+      console.log("id", data.id);
+    } catch (error) {
+      console.log("Error parsing JSON:", error);
+    }
+}
+
+
+
+const pushToCart = () =>{
+    const data = JSON.parse(decodeURIComponent(encodedData));
+    console.log("Data:", data);
+  var id = data.id;
+  var qty = data.qty;
+ if(id){
+     dispatch(addToCart(id,qty));
+ }
+}
+
+
   return (
    <>
    <Header />
@@ -69,4 +99,4 @@ const cartScreen = () => {
   );
 };
 
-export default cartScreen;
+export default CartScreen;

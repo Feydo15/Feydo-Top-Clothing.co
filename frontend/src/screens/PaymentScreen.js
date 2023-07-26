@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 const PaymentScreen = () => {
     window.scrollTo(0, 0);
 
-    const submitHandler = (e) =>{
-        e.preventDefault();
-    };
+    // const submitHandler = (e) =>{
+    //     e.preventDefault();
+    // };
   return (
     <>
     < Header />

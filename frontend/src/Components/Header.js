@@ -1,4 +1,7 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram, faYoutube, faLinkedin, faPinterest, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -13,20 +16,23 @@ const Header = () => {
               <p>info@feydo.com</p>
             </div>
             <div className="col-12 col-lg-6 justify-content-center justify-content-lg-6">
-              <Link to="">
-                <i className="fab fa-facebook"></i>
+            <Link to="">
+            <FontAwesomeIcon icon={faWhatsapp}  />
+              </Link>
+              <Link to="https://www.facebook.com">
+              <FontAwesomeIcon icon={faFacebook} />
               </Link>
               <Link to="">
-                <i className="fab fa-instagram"></i>
+              <FontAwesomeIcon icon={faInstagram} />
               </Link>
               <Link to="">
-                <i className="fa-brands fa-linkedin-in"></i>
+              <FontAwesomeIcon icon={faLinkedin} />
               </Link>
               <Link to="">
-                <i className="fab fa-youtube"></i>
+              <FontAwesomeIcon icon={faYoutube} />
               </Link>
               <Link to="">
-                <i className="fab fa-pinterest-p"></i>
+              <FontAwesomeIcon icon={faPinterest} />
               </Link>
             </div>
           </div>
@@ -123,8 +129,8 @@ const Header = () => {
                   </div>
                 </div>
                 <Link to="/cart">
-                    <i className="fas fa-shopping-bag"></i>
                     <span className="badge">4</span>
+                <FontAwesomeIcon icon={faShoppingBag}  />
                 </Link>
               </div>
             </div>

@@ -11,7 +11,7 @@ const HomeScreen = () => {
 
   return (
     <div>
-      <Header />
+         <Header />
          <ShopSection />
          <ContactInfo />
          <CalltoActionSection />
